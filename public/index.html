@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            .form {
+                display: flex;
+                max-width: 700px;
+                width: 100%;
+                margin: auto;
+                height: 100%;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .input {
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+                margin-left: 0;
+                margin-right: 0;
+                padding: 0;
+                margin-bottom: 10px;
+            }
+
+            .wrap {
+                margin: 10px;
+                width: 100%;
+            }
+
+            .modal {
+                display: none;
+                position: fixed;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+            }
+
+            .modal.show {
+                display: block;
+            }
+
+            .back {
+                background-color: black;
+                opacity: 0.3;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+            }
+
+            .popup {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                background-color: white;
+                border-radius: 5px;
+                padding: 16px;
+                max-width: 250px;
+                width: 100%;
+                opacity: 1;
+            }
+
+            .action {
+                margin-top: 10px;
+                text-align: center;
+            }
+
+            .button {
+                height: 30px;
+            }
+
+            .input {
+                font-size: 18px;
+                padding: 4px;
+            }
+
+            .header {
+                font-size: 18px;
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+
+            .description {
+                font-size: 16px;
+            }
+        </style>
+        <script src="/index.js"></script>
+    </head>
+    <body>
+        <form class="form" id="form">
+            <div class="wrap">
+                <div>
+                    имя
+                </div>
+                <input class="input" />
+                <button class="button">
+                    Отправить
+                </button>
+            </div>
+        </form>
+        <div class="modal" id="modal">
+            <div class="back"></div>
+            <div class="popup">
+                <div class="header" id="header">
+                    header
+                </div>
+                <div class="description" id="description">
+                    description
+                </div>
+                <div class="action">
+                    <button class="button" id="modal-sub">
+                        ОК
+                    </button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
